@@ -1,5 +1,5 @@
-### clone project
-### go to root directory
+### clone project - https://github.com/vikasMernDev/ReactjsTest
+### go to src folder
 ### npm install
 ### npm start
 

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { FetchUserList, FetchUserListFilter } from "../../Redux/Action";
 import Filter from "../Filters/Filter";
@@ -34,7 +34,7 @@ export default function Dashboard (props) {
     
     useEffect(() => {
         dispatch(FetchUserList())
-        },[])
+        },[dispatch])
 
     const onNameChange = (e) => {
         const nameFilter = e?.target?.value;

@@ -1,6 +1,6 @@
 import './App.css';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Store from './Redux/Store';
 import Dashboard from './components/Dashboard/Dashboard';
 import User from './components/Dashboard/User';

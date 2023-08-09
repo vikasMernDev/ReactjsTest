@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { FetchUserObj } from '../../Redux/Action';
@@ -25,15 +25,11 @@ const UserObjectsStyle = styled.div`
 export default function User() {
     const { code } = useParams();
     const dispatch = useDispatch();
-    const [user, setuser] = useState()
     const userobj=useSelector((state)=>state.user.userobj)
 
     useEffect(() => {
         dispatch(FetchUserObj(code));
-        if(userobj){
-            setuser(userobj)
-        }
-    }, [])
+    }, [dispatch,code])
     
   return (
     <MainDivStyle>
